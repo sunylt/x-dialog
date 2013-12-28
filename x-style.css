@@ -1,0 +1,150 @@
+body {
+	position: relative;
+}
+
+*html {
+	background-image: url(about:blank);
+	background-attachment: fixed;
+}
+
+/* 遮罩 */
+.x-dialog-mask {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	z-index: 9998;
+	background-color: #000;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+}
+
+/* 窗口边框 背景实现半透明 */
+.x-dialog-main {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: rgba(0, 0, 0, 0.5);
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000, endColorstr=#88000000);
+	box-shadow: 0 3px 10px rgba(0, 0, 0, .4);
+}
+
+/* 窗口内层 */
+.x-dialog-inner {
+	position: relative;
+	background-color: #fff;
+}
+
+/* 用table实现内容的宽度自适应 */
+.x-dialog-table {
+	margin: 0;
+	width: auto;
+	border:0 none;
+	border-spacing: 0;
+	border-collapse: collapse;
+	background-color: #fff;
+}
+
+/* 窗口的所有主体都在这里面 */
+.x-dialog-cell {
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	vertical-align: top;
+	text-align: left;
+}
+
+/* 窗口标题 */
+.x-dialog-title {
+	font-size: 13px;
+	font-weight: bold;
+	color: #666;
+	height: 38px;
+	line-height: 38px;
+	font-family: sans-serif;
+	border-bottom: 1px solid #E6E6E6;
+	background: -moz-linear-gradient(top, #FFFFFF 0%, #F5F5F5 100%);
+	background: -webkit-linear-gradient(top, #FFFFFF 0%, #F5F5F5 100%);
+	background: linear-gradient(top, #FFFFFF 0%, #F5F5F5 100%);
+	background-color: #f5f5f5\9;
+	padding: 0 15px;
+}
+
+/* 关闭按钮 */
+.x-dialog-close {
+	color: #999;
+	cursor: pointer;
+	font-family: tahoma;
+	font-size: 24px;
+	height: 18px;
+	line-height: 18px;
+	overflow: hidden;
+	position: absolute;
+	right: 16px;
+	text-decoration: none;
+	top: 9px;
+	width: 18px;
+	text-align: center;
+	z-index: 10;
+}
+
+.x-dialog-close:hover {
+	color: #666;
+}
+
+/* 内容区域 */
+.x-dialog-content {
+
+}
+
+/* 按钮区域 */
+.x-dialog-footer {
+	text-align: right;
+	white-space: nowrap;
+	border-top: 1px solid #f1f1f1;
+}
+
+/* 普通按钮 */
+.x-dialog-button {
+	margin: 15px 15px 15px 0;
+	border: 1px solid #b2b2b2;
+	padding: 0 11px;
+	line-height: 22px;
+	height: 22px;
+	overflow: hidden;
+	display: inline-block;
+	color: #333;
+	font-weight: 700;
+	cursor: pointer;
+	box-shadow: 1px 1px 0 rgba(0, 0, 0, .1);
+	border-radius: 2px;
+	font-size: 12px;
+	text-decoration: none;
+	background: -webkit-linear-gradient(top, #fff, #eee);
+	background: -moz-linear-gradient(top, #fff, #eee);
+	background: linear-gradient(top, #fff, #eee);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+}
+
+.x-dialog-button:hover {
+	background: #f7f7f7;
+	text-decoration: none;
+	filter: none;
+}
+
+/* 按钮高亮状态 */
+.x-button-hilight {
+	border: 1px solid #1588db;
+	color: #fff;
+	background: -webkit-linear-gradient(top, #4cb4ff, #26a1f9);
+	background: -moz-linear-gradient(top, #4cb4ff, #26a1f9);
+	background: linear-gradient(top, #4cb4ff, #26a1f9);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4cb4ff', endColorstr='#26a1f9');
+}
+
+.x-button-hilight:hover {
+	background: #4cb4ff !important;
+	filter: none;
+}
