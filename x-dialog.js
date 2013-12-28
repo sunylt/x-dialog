@@ -17,8 +17,8 @@ define(function(require, exports, module) {
     XDialog.prototype = {
   
         init: function(config) {
-			      this.config = config;
-			      this.DOM.main.attr('id', config.id ? config.id : '');
+			this.config = config;
+			this.DOM.main.attr('id', config.id ? config.id : '');
             this.DOM.main.css('padding', config.borderWidth);
             this.DOM.content.css({'width': config.width, 'height': config.height});
             this.DOM.close[config.close ? 'show' : 'hide']();
